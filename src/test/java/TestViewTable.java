@@ -24,7 +24,7 @@ public class TestViewTable {
         con = pool.takeConnection();
         BookingTableDao tableDaoForView=new BookingTableDao(con);
         try {
-            List<BookingTable>bookingTables=tableDaoForView.getAll(10);
+            List<BookingTable>bookingTables=tableDaoForView.getRange(10,10);
             for (BookingTable bookingTable : bookingTables) {
                 System.out.println( bookingTable.getId()+" "+bookingTable.getRoomNo());
             }

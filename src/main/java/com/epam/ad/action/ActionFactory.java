@@ -17,8 +17,8 @@ public class ActionFactory {
         actions.put("POST/registrationform",new RegistrationForm());
         actions.put("GET/adminForm",new ShowPageAction("adminForm"));
         actions.put("POST/adminForm",new ShowEditPageAction());
-        actions.put("GET/bookingtable",new ShowPageAction("bookingtable"));
-        actions.put("POST/bookingtable",new BookingTableAction());
+//        actions.put("GET/bookingtable",new ShowPageAction("bookingtable"));
+        actions.put("GET/bookingtable",new BookingTableAction());
         actions.put("GET/roomdetail",new ShowPageAction("roomdetail"));
         actions.put("POST/roomdetail",new RoomTableAction());
         actions.put("GET/customerdetail",new ShowPageAction("customerdetail"));

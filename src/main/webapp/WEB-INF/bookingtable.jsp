@@ -1,20 +1,7 @@
-<%--@elvariable id="counts" type="java.lang.Integer"--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--@elvariable id="countPlus" type="java.lang.Integer"--%>
-<%@ page import="com.epam.ad.entity.BookingTable" %>
-<%@ page import="com.epam.ad.action.BookingTableAction" %>
 
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.List" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Askar
-  Date: 09.08.2014
-  Time: 12:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%! String pageName ="Bookingtable";%>
+<%! String pageName = "Bookingtable";%>
 
 
 <html>
@@ -26,6 +13,16 @@
     <link href="../static/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
+<form class="form-inline">
+    <div>
+        <input type="text" name="page" value="${pageNumber+1}" hidden="hidden"/>
+        <input type="text" name="rows" value="${rowsCount}" hidden="hidden"/>
+    </div>
+
+    <%--<button id="changeBtn" name="action" value="bookingTableEdit" type="submit" class="btn">Next</button>--%>
+    <button id="changeBtn" type="submit" class="btn">Next</button>
+
+</form>
 <div id="roomAdminGeneral">
     <table cellpadding="0" cellspacing="0" border="1" width="100%">
         <tr>
@@ -36,7 +33,6 @@
             </td>
             <td>
                 <div id="roomEditRight">
-
 
 
                     <table class="table table-bordered table-hover table-condensed">
@@ -51,39 +47,45 @@
                         </thead>
                         <tbody>
 
-                        <%
-                            List<BookingTable> tableList=new ArrayList<BookingTable>(BookingTableAction.tableList);
+                        <%--<%--%>
+                        <%--List<BookingTable> tableList=new ArrayList<BookingTable>(BookingTableAction.tableList);--%>
 
-                          request.setAttribute("list",tableList);
-                        %>
+                        <%--request.setAttribute("list",tableList);--%>
+                        <%--%>--%>
 
 
-                       <c:forEach items="${list}" var="bt">
+                        <c:forEach items="${list}" var="bt">
 
-                            <tr><td>${bt.dateFrom}</td>
+                            <tr>
+                                <td>${bt.dateFrom}</td>
                                 <td>"${bt.dateTo}</td>
                                 <td>${bt.dayCount}</td>
-                                <td>${bt.roomNo}</td></tr>
+                                <td>${bt.roomNo}</td>
+                            </tr>
                         </c:forEach>
                         <hr>
                         <tr>
                             <div>
-                                <form class="form-inline"  method="post">
+                                <form class="form-inline">
                                     <div>
-                                        <input type="text" name="counts" value="${counts+0}" placeholder="${counts+0}" hidden="hidden" />
-                                        <input type="text" name="steps" value="1" placeholder="1" hidden="hidden" />
+                                        <%--totalpagenumber--%>
+                                        <input type="text" name="page" value="${pageNumber+1}" hidden="hidden"/>
+                                        <input type="text" name="rows" value="${rowsCount}" hidden="hidden"/>
                                     </div>
 
-                                    <button id="changeBtn" name="action" value="bookingTableEdit" type="submit" class="btn">Next</button>
+                                    <%--<button id="changeBtn" name="action" value="bookingTableEdit" type="submit" class="btn">Next</button>--%>
+                                    <button id="changeBtn" type="submit" class="btn">Next</button>
 
                                 </form>
-                                <form class="form-inline"  method="post">
+                                <form class="form-inline">
                                     <div>
-                                        <input type="text" name="counts" value="${counts+0}"placeholder="${counts+0}" hidden="hidden"/>
-                                        <input type="text" name="steps" value="-1" placeholder="-1" hidden="hidden"/>
+                                        <input type="text" name="page" hidden="hidden"/>
+                                        <input type="text" name="rows" hidden="hidden"/>
                                     </div>
 
-                                    <button id="changeBtn2" name="action" value="bookingTableEdit" type="submit" class="btn">Back</button>
+                                    <button id="changeBtn2" name="action" value="bookingTableEdit" type="submit"
+                                            class="btn">Back
+                                    </button>
 
                                 </form>
                             </div>
@@ -91,16 +93,18 @@
 
                         </tbody>
                     </table>
-    <%--     --%>
+                    <%--     --%>
 
                     <hr>
-                    <form class="form-inline"  method="post" >
+                    <form class="form-inline" method="get">
                         <div>
-                            <input type="text" name="counts" value="${counts}"placeholder="${counts}" hidden="hidden"/>
-                            <input type="text" name="steps" value="-1" placeholder="-1" hidden="hidden"/>
+                            <input type="text" name="page" hidden="hidden"/>
+                            <input type="text" name="rows" hidden="hidden"/>
                         </div>
 
-                        <button id="changeBtn3" name="action" value="adminRederect" type="submit" class="btn">Перейти на главную страницу</button>
+                        <button id="changeBtn3" name="action" value="adminRederect" type="submit" class="btn">Перейти на
+                            главную страницу
+                        </button>
 
                     </form>
 
@@ -129,13 +133,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
 
 
                 </div>

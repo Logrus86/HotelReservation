@@ -36,14 +36,14 @@ public class CustomerTableAction implements Action {
 
                 customers.removeAll(customers);
                 CustomerDao customerDao=new CustomerDao(con);
-                customers=customerDao.getAll(countPlus);
+                customers=customerDao.getRange(countPlus,10);
             }else {
                 int countMinus = Integer.parseInt(counts) - 10;
                 request.setAttribute("counts", countMinus);
 
                 customers.removeAll(customers);
                 CustomerDao customerDao=new CustomerDao(con);
-                customers=customerDao.getAll(countMinus);
+                customers=customerDao.getRange(countMinus,10);
             }
             pool.releaseConnection(con);
             ConnectionPool.dispose();

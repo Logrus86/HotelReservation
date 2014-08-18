@@ -118,6 +118,7 @@ try {
     }
     @Override
     public String getSelectQuery(int step) {
+        //todo PreparedStatement
         return "SELECT ID, DATE_FRO, DATE_TO, NO_OF_DAY, ROOM_NO FROM BOOKINGTABLE ORDER BY ID LIMIT 10 OFFSET "+String.valueOf(step)+"";
     }
 

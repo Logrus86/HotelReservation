@@ -9,7 +9,7 @@
 <script type='text/javascript' src='<c:url value="../static/bootstrap.min.js"/>'></script>
 
 <link href="../static/bootstrap.min.css" rel="stylesheet" media="screen">
-<p align="center">Current page:<%=pageName%></p>
+
 <hr>
 
 

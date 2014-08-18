@@ -155,9 +155,9 @@ public abstract class AbstractJDBCDao<T extends Identified<PK>, PK extends Integ
         }
         return list;
     }
-    public List<T> getAll(int step) throws PersistException {
+    public List<T> getRange(int pageNumber, int pageSize) throws PersistException {
         List<T> list;
-        String sql = getSelectQuery(step);
+        String sql = getSelectQuery((pageNumber-1)*pageSize);
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             ResultSet rs = statement.executeQuery();
             list = parseResultSet(rs);

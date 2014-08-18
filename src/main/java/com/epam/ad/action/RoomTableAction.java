@@ -37,14 +37,14 @@ public class RoomTableAction implements Action {
                     request.setAttribute("counts", countPlus);
                     rooms.removeAll(rooms);
                     RoomDao roomDao = new RoomDao(con);
-                    rooms = roomDao.getAll(countPlus);
+                    rooms = roomDao.getRange(countPlus,10);
 
                 } else {
                     int countMinus = Integer.parseInt(counts) - 10;
                     request.setAttribute("counts", countMinus);
                     rooms.removeAll(rooms);
                     RoomDao roomDao = new RoomDao(con);
-                    rooms = roomDao.getAll(countMinus);
+                    rooms = roomDao.getRange(countMinus,10);
                 }
 
 
