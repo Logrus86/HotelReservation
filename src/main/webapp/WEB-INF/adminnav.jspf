@@ -1,0 +1,38 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.epam.ad.entity.Room" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.epam.ad.action.ChangeRoomAction" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<script type='text/javascript' src='<c:url value="../static/jquery.min.js"/>'></script>
+<script type='text/javascript' src='<c:url value="../static/bootstrap.min.js"/>'></script>
+
+<link href="../static/bootstrap.min.css" rel="stylesheet" media="screen">
+<p align="center">Current page:<%=pageName%></p>
+<hr>
+
+
+                <form class="form-inline" method="post">
+
+                    <div>
+                       <input type="text" name="counts" value="${counts-counts-10}" placeholder="${counts-counts-10}" hidden="hidden" />
+                       <input type="text" name="steps" value="1" placeholder="1" hidden="hidden" />
+                    </div>
+
+                    <button  name="action" value="bookingTableEdit" type="submit" class="btn">Редактирование Журнала бронирования</button>
+                    <hr>
+                    <%--<button  name="action" value="customerEdit" type="submit" class="btn">Редактирование данных клиентов</button>--%>
+                    <%--<hr>--%>
+                    <%--<button  name="action" value="roomEdit" type="submit" class="btn">Редактирование параметров комнат</button>--%>
+                    <hr>
+                </form>
+
+
+
+
+
+
+
+
+

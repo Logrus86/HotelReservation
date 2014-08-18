@@ -1,0 +1,191 @@
+body {
+    background-color: #f8f8f8;
+    margin: auto;
+    width: 100%;
+}
+div#image1 {
+    background: url("img1.jpg") center no-repeat;
+    height: 60%;
+    width: 60%;
+
+    align-items: center;
+    align-content: center;
+}
+div#image2 {
+    background: url("../images/img2.jpg")center no-repeat ;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    align-content: center;
+}
+div#image3 {
+    background: url("../images/img3.jpg")center no-repeat;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    align-content: center;}
+div#image4 {
+    background: url("../images/img4.jpg")center no-repeat;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    align-content: center;}
+div#image5 {
+    background: url("img5.jpg")center no-repeat;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    align-content: center;}
+div#statusbar {
+    background: url("statusbarbg.png") repeat-x;
+    border-bottom: 2px groove #bababa;
+    height: 40px;
+    width: 100%;
+}
+
+div#statusbarcontent {
+    margin: 1px auto 0px auto;
+    height: 14px;
+    width: 800px;
+}
+
+div#statusbarcommands {
+    height: 14px;
+    width: 400px;
+}
+
+div#header {
+    background: url("headerimage.jpg") no-repeat center;
+
+    border-bottom: 2px ridge #ffffff;
+    height: 200px;
+    width: 100%;
+}
+
+form#searchform input[type="submit"] {
+
+    float: right;
+    width: 100px;
+}
+
+form#searchform input[type="text"] {
+    background: url("searchfield.png") no-repeat;
+    border:none;
+    height:25px;
+    padding: 5px 5px 0px 20px;
+    width:210px;
+    float: right;
+}
+form#searchform input[type="password"] {
+    background: url("searchfield.png") no-repeat;
+    border:none;
+    height:25px;
+    padding: 5px 5px 0px 20px;
+    width:210px;
+    float: right;
+}
+
+
+p#welcome {
+    float:left;
+    padding-top: 7px;
+    width: 150px;
+}
+
+
+p#actionbar {
+    background: url("actionbarbg.png") no-repeat;
+    height: 14px;
+    margin-left:180px;
+    padding: 16px 20px;
+    width: 220px;
+}
+
+p#actionbar a:before {
+    content: '| ';
+}
+
+p#actionbar a[title="License"]:after {
+    content: ' |';
+}
+div#header {
+    background: url("headerimage.jpg") no-repeat center;
+    background-color: #000000;
+    border-bottom: 2px ridge #ffffff;
+    height: 250px;
+    width: 100%;
+}
+
+div#logo {
+    margin: auto;
+    padding-top: 35px;
+    width: 800px;
+}
+
+div#logo1 {
+    margin: auto;
+    padding: 65px;
+    width: 0px;
+}
+
+ul#change {
+    float: left;
+    width: 70%;
+}
+button#changeBtn{
+    float: right;
+}
+
+div#footerimage {
+    background: url("footerimage.jpg") no-repeat #000000 center;
+    border-top: 2px groove #ffffff;
+    border-bottom:2px ridge #ffffff;
+    height:50px;
+    width:100%;
+}
+
+p#footertext {
+    background: url("contenttopshadow.png") repeat-x;
+    height: 37px;
+    padding-top: 13px;
+    width: 100%;
+}
+div#contentbottomshadow {
+    background: url("contentbottomshadow.png") repeat-x;
+    clear: both;
+    height: 20px;
+    width: 100%;
+}
+div#roomEditLeft {
+
+    width: auto;
+    float: left;
+}
+div#roomEditRight {
+
+    width: auto;
+    margin-top: 0px;
+    margin-left: 500px;
+    float: left;
+}
+
+div#roomAdminGeneral{
+    width: 100%;
+    height: 100%;
+}
+div#accordion2{
+    width: 70%;
+    margin-left: 230px;
+
+}
+form#next{
+    float: right;
+}
+form#back{
+    float: left;
+}
+select#roles{
+    float: right;
+    width: 20%;
+
+}
